@@ -1,2 +1,94 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700,800');
+
+body 
+{
+  height: 100%;
+  background: green;
+  /* fallback for old browsers */
+}
+
+h1 
+{
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 29px;
+  color: black;
+}
+
+.text
+{
+  font-family: Space Mono, Helvetica, 'sans-serif';
+  font-size: 14px;
+  color: #333;
+  /* Text won't center...*/
+}
+
+.container 
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  margin: 40px 0px 10px 0;
+}
+
+.container-button
+ {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+}
+
+.weather-icon,
+.title
+{
+  grid-column: 1/4;
+  margin: 0 auto;
+  text-align: center;
+  background: #efefef;
+  border-radius: 4px;
+  padding: 15px 100px;
+}
+
+.important-info
+{ 
+  grid-column: 1;
+}
+
+.description-container
+{
+  background: #efefef;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 200px;
+  margin: 0 auto;
+  padding:20px 0px;
+}
+
+.block-1
+{
+  grid-column: 1;
+  padding: 10px;
+}
+.weatherInfo 
+{
+  height: 100%;
+}
+
+.temp-info 
+{
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 65px;
+  color: black;
+  font-weight: 600;
+}
+
+.switch-button 
+{
+  grid-column: 1 1 1;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+}
