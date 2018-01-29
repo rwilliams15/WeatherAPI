@@ -1,4 +1,4 @@
-// Get user's geolocation
+=// Get user's geolocation
 var lat,
   lon,
   tWeather,
@@ -58,4 +58,55 @@ console.log(data);
       $("#min").append( minCelsius + 'ºC');
       $("#max").append( maxCelsius + 'ºC');
     });
+	 // background code here 
+});
+
+
+var switchButton = document.querySelector('.switch-button');
+var switchBtnRight = document.querySelector('.switch-button-case.right');
+var switchBtnLeft = document.querySelector('.switch-button-case.left');
+var activeSwitch = document.querySelector('.active');
+
+function switchLeft() 
+{
+  switchBtnRight.classList.remove('active-case');
+  switchBtnLeft.classList.add('active-case');
+  activeSwitch.style.left = '0%';
+  
+  $('#farenheit').empty();
+  $('#min').empty();
+  $('#max').empty();
+  $('#celsius').append(celsius + 'ºC');
+  $("#min").append(minCelsius + 'ºC');
+  $("#max").append(maxCelsius + 'ºC');
+}
+
+function switchRight() 
+{
+  switchBtnRight.classList.add('active-case');
+  switchBtnLeft.classList.remove('active-case');
+  activeSwitch.style.left = '50%';
+
+  $('#celsius').empty();
+  $('#min').empty();
+  $('#max').empty();
+  $('#farenheit').append(farenheit + 'ºF');
+  $('#min').append(minF + "ºF");
+  $('#max').append(maxF  + "ºF");
+
+}
+
+switchBtnLeft.addEventListener('click', function() 
+{
+  $('#celsius').empty();
+  switchLeft();
+
+}, false);
+
+switchBtnRight.addEventListener('click', function() 
+{
+  $('#farenheit').empty();
+  switchRight();
+
+}, false);
   
